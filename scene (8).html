@@ -1,0 +1,206 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head data-cloud9-id="2">
+    <title data-cloud9-id="5"> Triwizard Tournament Maze </title>
+    <script data-cloud9-id="6" src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script data-cloud9-id="7" src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" media="all" />
+</head>
+
+<body data-cloud9-id="3" onload="preload()" class="a-body ">
+    <a-scene data-cloud9-id="8" id="scene" class="fullscreen" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+
+        <a-assets data-cloud9-id="9" id="assets">
+        </a-assets>
+
+        <a-entity data-cloud9-id="10">
+            <a-camera data-cloud9-id="11" id="camera" position="0 1.6 0" camera="" look-controls="" wasd-controls="">
+                <a-cursor data-cloud9-id="12" material="" line="end:0 0 -1000" raycaster="" cursor="" geometry=""></a-cursor>
+            </a-camera>
+        </a-entity>
+
+        <!--ground-->
+        <a-plane data-cloud9-id="13" id="ground" color="red" height="500" width="500" rotation="-90 0 0" material="" geometry=""></a-plane>
+
+        <!--walls-->
+        <a-box data-cloud9-id="116" class="wall" height="10" width="1.5" depth="10" position="1.5 5 0" color="grey" material="" geometry=""></a-box>
+        <a-box data-cloud9-id="117" class="wall" height="10" width="1.5" depth="10" position="-1.5 5 0" color="grey" material="" geometry=""></a-box>
+        <a-box data-cloud9-id="118" class="wall" height="10" width="1.5" depth="10" position="-1.5 5 -9.624" color="grey" geometry="depth:6" material=""></a-box>
+        <a-box data-cloud9-id="119" class="wall" height="10" width="1.5" depth="10" position="1.5 5 -9.5" color="grey" geometry="depth:6" material=""></a-box>
+        <a-box data-cloud9-id="120" class="wall" height="10" width="1.5" depth="10" position="19.5 5 -13.25" color="grey" geometry="depth:12" material=""></a-box>
+        <a-box data-cloud9-id="121" class="wall" height="10" width="1.5" depth="10" position="22.5 5 -13.25" color="grey" geometry="depth:12" material=""></a-box>
+        <a-box data-cloud9-id="122" class="wall" height="10" width="1.5" depth="10" position="29 5 -15" color="grey" geometry="depth:8" material=""></a-box>
+        <a-box data-cloud9-id="123" class="wall" height="10" width="1.5" depth="10" position="29 5 -24" color="grey" geometry="depth:5" material=""></a-box>
+        <a-box data-cloud9-id="124" class="wall" height="10" width="1.5" depth="10" position="15.5 5 -27.25" color="grey" geometry="depth:1.5" material=""></a-box>
+        <a-box data-cloud9-id="125" class="wall" height="10" width="1.5" depth="10" position="31.75 5 -19.5" color="grey" geometry="depth:14" material=""></a-box>
+        <a-box data-cloud9-id="126" class="wall" height="10" width="1.5" depth="10" position="44.5 5 -29" color="grey" geometry="depth:8" material=""></a-box>
+        <a-box data-cloud9-id="127" class="wall" height="10" width="1.5" depth="10" position="54 5 -31.25" color="grey" geometry="depth:9.5" material=""></a-box>
+        <a-box data-cloud9-id="128" class="wall" height="10" width="1.5" depth="10" position="60.5 5 -37" color="grey" geometry="depth:18" material=""></a-box>
+        <a-box data-cloud9-id="129" class="wall" height="10" width="1.5" depth="10" position="60.5 5 -53.25" color="grey" geometry="depth:12" material=""></a-box>
+        <a-box data-cloud9-id="130" class="wall" height="10" width="1.5" depth="10" position="63.25 5 -41" color="grey" geometry="depth:35" material=""></a-box>
+        <a-box data-cloud9-id="131" class="wall" height="10" width="1.5" depth="10" position="51.029 5 -29" color="grey" geometry="depth:8" material=""></a-box>
+        <a-box data-cloud9-id="132" class="wall" height="10" width="1.5" depth="10" position="44.5 5 -36.898" color="grey" geometry="depth:4.75" material=""></a-box>
+        <a-box data-cloud9-id="133" class="wall" height="10" width="1.5" depth="10" position="50 5 -40" color="grey" geometry="depth:4.5" material=""></a-box>
+        <a-box data-cloud9-id="134" class="wall" height="10" width="1.5" depth="10" position="41.5 5 -34.25" color="grey" geometry="depth:13" material=""></a-box>
+        <a-box data-cloud9-id="135" class="wall" height="10" width="1.5" depth="10" position="23.25 5 -40.5" color="grey" geometry="depth:11" material=""></a-box>
+        <a-box data-cloud9-id="136" class="wall" height="10" width="1.5" depth="10" position="23.25 5 -53.704" color="grey" geometry="depth:11" material=""></a-box>
+        <a-box data-cloud9-id="137" class="wall" height="10" width="1.5" depth="10" position="6.75 5 -42.841" color="grey" geometry="depth:15" material=""></a-box>
+        <a-box data-cloud9-id="138" class="wall" height="10" width="1.5" depth="10" position="6.75 5 -55.996" color="grey" geometry="depth:6" material=""></a-box>
+        <a-box data-cloud9-id="139" class="wall" height="10" width="1.5" depth="10" position="36 5 -8.958" color="grey" geometry="depth:4.75" material=""></a-box>
+        <a-box data-cloud9-id="140" class="wall" height="10" width="1.5" depth="10" position="44.75 5 -14.5" color="grey" geometry="depth:9.5" material=""></a-box>
+        <a-box data-cloud9-id="141" class="wall" height="10" width="1.5" depth="10" position="39 5 -7.5" color="grey" geometry="depth:7.5" material=""></a-box>
+        <a-box data-cloud9-id="142" class="wall" height="10" width="1.5" depth="10" position="41.75 5 -14.75" color="grey" geometry="depth:3" material=""></a-box>
+        <a-box data-cloud9-id="143" class="wall" height="10" width="1.5" depth="10" position="14 5 -15" color="grey" geometry="depth:8" material=""></a-box>
+        <a-box data-cloud9-id="144" class="wall" height="10" width="1.5" depth="10" position="-15 5 -13.5" color="grey" geometry="depth:14" material=""></a-box>
+        <a-box data-cloud9-id="145" class="wall" height="10" width="1.5" depth="10" position="-18 5 -12" color="grey" geometry="depth:17" material=""></a-box>
+        <a-box data-cloud9-id="146" class="wall" height="10" width="1.5" depth="10" position="-33 5 -15.5" color="grey" geometry="" material=""></a-box>
+        <a-box data-cloud9-id="147" class="wall" height="10" width="1.5" depth="10" position="-36 5 -17" color="grey" geometry="depth:13" material=""></a-box>
+        <a-box data-cloud9-id="148" class="wall" height="10" width="1.5" depth="10" position="-24.75 5 -29.5" color="grey" geometry="depth:15" material=""></a-box>
+        <a-box data-cloud9-id="149" class="wall" height="10" width="1.5" depth="10" position="-27.793 5 -30.034" color="grey" geometry="depth:15" material=""></a-box>
+        <a-box data-cloud9-id="150" class="wall" height="10" width="1.5" depth="10" position="-34 5 -43.5" color="grey" geometry="depth:15" material=""></a-box>
+        <a-box data-cloud9-id="151" class="wall" height="10" width="1.5" depth="10" position="-23.25 5 -55" color="grey" geometry="" material=""></a-box>
+        <a-box data-cloud9-id="152" class="wall" height="10" width="1.5" depth="10" position="-20.25 5 -52.25" color="grey" geometry="" material=""></a-box>
+        <a-box data-cloud9-id="153" class="wall" height="10" width="1.5" depth="10" position="-11.75 5 -53.282" color="grey" geometry="depth:7" material=""></a-box>
+        <a-box data-cloud9-id="154" class="wall" height="10" width="1.5" depth="10" position="-8.75 5 -56.5" color="grey" geometry="depth:9" material=""></a-box>
+        <a-box data-cloud9-id="155" class="wall" height="10" width="1.5" depth="10" position="-31.25 5 -43.75" color="grey" geometry="" material=""></a-box>
+        <a-box data-cloud9-id="156" class="wall" height="10" width="1.5" depth="10" position="-10 5 -15.702" color="grey" geometry="depth:8" material=""></a-box>
+        <a-box data-cloud9-id="157" class="wall" height="10" width="1.5" depth="10" position="-7 5 -19.5" color="grey" geometry="depth:8" material=""></a-box>
+        <a-box data-cloud9-id="158" class="wall" height="10" width="1.5" depth="10" position="-3.25 5 -20" color="grey" geometry="depth:4.5" material=""></a-box>
+        <a-box data-cloud9-id="159" class="wall" height="10" width="1.5" depth="10" position="2.5 5 -16.75" color="grey" geometry="depth:5" material=""></a-box>
+        <a-box data-cloud9-id="160" class="wall" height="10" width="1.5" depth="10" position="5.5 5 -16.75" color="grey" geometry="depth:5" material=""></a-box>
+        <a-box data-cloud9-id="161" class="wall" height="10" width="1.5" depth="10" position="11 5 -16.75" color="grey" geometry="depth:5" material=""></a-box>
+        <a-box data-cloud9-id="162" class="wall" height="10" width="1.5" depth="10" position="5.5 5 -26.748" color="grey" geometry="depth:12" material=""></a-box>
+        <a-box data-cloud9-id="163" class="wall" height="10" width="1.5" depth="10" position="-1.25 5 -35.75" color="grey" geometry="depth:7" material=""></a-box>
+        <a-box data-cloud9-id="164" class="wall" height="10" width="1.5" depth="10" position="-4.25 5 -33.325" color="grey" geometry="depth:8.25" material=""></a-box>
+        <a-box data-cloud9-id="165" class="wall" height="10" width="1.5" depth="10" position="2.5 5 -26.135" color="grey" geometry="depth:9" material=""></a-box>
+        <a-box data-cloud9-id="166" class="wall" height="10" width="21" depth="1.5" position="20.25 5 -4.25" color="grey" material="" geometry="width:39"></a-box>
+        <a-box data-cloud9-id="167" class="wall" height="10" width="15" depth="1.5" position="-9.75 5 -4.25" color="grey" material="" geometry="width:18"></a-box>
+        <a-box data-cloud9-id="168" class="wall" height="10" width="15" depth="1.5" position="-26.25 5 -19.75" color="grey" geometry="" material=""></a-box>
+        <a-box data-cloud9-id="169" class="wall" height="10" width="15" depth="1.5" position="-16.5 5 -22.75" color="grey" geometry="width:18" material=""></a-box>
+        <a-box data-cloud9-id="170" class="wall" height="10" width="15" depth="1.5" position="-14.5 5 -36.75" color="grey" geometry="width:22" material=""></a-box>
+        <a-box data-cloud9-id="171" class="wall" height="10" width="15" depth="1.5" position="-30.75 5 -36.75" color="grey" geometry="width:5" material=""></a-box>
+        <a-box data-cloud9-id="172" class="wall" height="10" width="15" depth="1.5" position="-25.5 5 -48" color="grey" geometry="width:10" material=""></a-box>
+        <a-box data-cloud9-id="173" class="wall" height="10" width="15" depth="1.5" position="-16 5 -60.25" color="grey" geometry="width:16" material=""></a-box>
+        <a-box data-cloud9-id="174" class="wall" height="10" width="15" depth="1.5" position="-16 5 -57.25" color="grey" geometry="width:10" material=""></a-box>
+        <a-box data-cloud9-id="175" class="wall" height="10" width="15" depth="1.5" position="-28.75 5 -50.818" color="grey" geometry="width:12" material=""></a-box>
+        <a-box data-cloud9-id="176" class="wall" height="10" width="15" depth="1.5" position="-16.25 5 -39.5" color="grey" geometry="width:31.5" material=""></a-box>
+        <a-box data-cloud9-id="177" class="wall" height="10" width="15" depth="1.5" position="-8.25 5 -7.25" color="grey" geometry="" material=""></a-box>
+        <a-box data-cloud9-id="178" class="wall" height="10" width="15" depth="1.5" position="8.25 5 -11.75" color="grey" geometry="width:13" material=""></a-box>
+        <a-box data-cloud9-id="179" class="wall" height="10" width="15" depth="1.5" position="11.25 5 -7.25" color="grey" geometry="width:18" material=""></a-box>
+        <a-box data-cloud9-id="180" class="wall" height="10" width="15" depth="1.5" position="29.25 5 -7.25" color="grey" geometry="" material=""></a-box>
+        <a-box data-cloud9-id="181" class="wall" height="10" width="15" depth="1.5" position="37.5 5 -13.25" color="grey" geometry="width:10" material=""></a-box>
+        <a-box data-cloud9-id="182" class="wall" height="10" width="15" depth="1.5" position="40 5 -15.75" color="grey" geometry="width:5" material=""></a-box>
+        <a-box data-cloud9-id="183" class="wall" height="10" width="15" depth="1.5" position="40 5 -18.5" color="grey" geometry="width:8" material=""></a-box>
+        <a-box data-cloud9-id="184" class="wall" height="10" width="15" depth="1.5" position="57 5 -24.25" color="grey" geometry="width:13.5" material=""></a-box>
+        <a-box data-cloud9-id="185" class="wall" height="10" width="15" depth="1.5" position="57.25 5 -27.25" color="grey" geometry="width:8" material=""></a-box>
+        <a-box data-cloud9-id="186" class="wall" height="10" width="15" depth="1.5" position="36.75 5 -17.125" color="grey" geometry="width:1.5;depth:4.25" material=""></a-box>
+        <a-box data-cloud9-id="187" class="wall" height="10" width="15" depth="1.5" position="32.353 5 -10.576" color="grey" geometry="width:8.25" material=""></a-box>
+        <a-box data-cloud9-id="188" class="wall" height="10" width="15" depth="1.5" position="42 5 -10.5" color="grey" geometry="width:5" material=""></a-box>
+        <a-box data-cloud9-id="189" class="wall" height="10" width="15" depth="1.5" position="-5.75 5 -12" color="grey" geometry="width:10" material=""></a-box>
+        <a-box data-cloud9-id="190" class="wall" height="10" width="15" depth="1.5" position="-2.25 5 -15" color="grey" geometry="width:11" material=""></a-box>
+        <a-box data-cloud9-id="191" class="wall" height="10" width="15" depth="1.5" position="8.25 5 -15" color="grey" geometry="width:7" material=""></a-box>
+        <a-box data-cloud9-id="192" class="wall" height="10" width="15" depth="1.5" position="8.25 5 -18.5" color="grey" geometry="width:7" material=""></a-box>
+        <a-box data-cloud9-id="193" class="wall" height="10" width="15" depth="1.5" position="16.75 5 -18.5" color="grey" geometry="width:7" material=""></a-box>
+        <a-box data-cloud9-id="194" class="wall" height="10" width="15" depth="1.5" position="25.75 5 -18.5" color="grey" geometry="width:8" material=""></a-box>
+        <a-box data-cloud9-id="195" class="wall" height="10" width="15" depth="1.5" position="22.25 5 -25.75" color="grey" geometry="" material=""></a-box>
+        <a-box data-cloud9-id="196" class="wall" height="10" width="15" depth="1.5" position="38.601 5 -25.75" color="grey" geometry="width:13" material=""></a-box>
+        <a-box data-cloud9-id="197" class="wall" height="10" width="15" depth="1.5" position="47.75 5 -32.25" color="grey" geometry="width:8" material=""></a-box>
+        <a-box data-cloud9-id="198" class="wall" height="10" width="15" depth="1.5" position="61.875 5 -58.942" color="grey" geometry="width:4.25" material=""></a-box>
+        <a-box data-cloud9-id="199" class="wall" height="10" width="15" depth="1.5" position="49 5 -35.25" color="grey" geometry="width:10.5" material=""></a-box>
+        <a-box data-cloud9-id="200" class="wall" height="10" width="15" depth="1.5" position="47.75 5 -38.5" color="grey" geometry="width:5" material=""></a-box>
+        <a-box data-cloud9-id="201" class="wall" height="10" width="15" depth="1.5" position="45.75 5 -41.5" color="grey" geometry="width:10" material=""></a-box>
+        <a-box data-cloud9-id="202" class="wall" height="10" width="15" depth="1.5" position="28.5 5 -28.5" color="grey" geometry="width:27.5" material=""></a-box>
+        <a-box data-cloud9-id="203" class="wall" height="10" width="15" depth="1.5" position="15 5 -35.75" color="grey" geometry="width:18" material=""></a-box>
+        <a-box data-cloud9-id="204" class="wall" height="10" width="15" depth="1.5" position="15 5 -59" color="grey" geometry="width:18" material=""></a-box>
+        <a-box data-cloud9-id="205" class="wall" height="10" width="15" depth="1.5" position="-0.5 5 -52.75" color="grey" geometry="width:16" material=""></a-box>
+        <a-box data-cloud9-id="206" class="wall" height="10" width="15" depth="1.5" position="-2.5 5 -50" color="grey" geometry="width:20" material=""></a-box>
+        <a-box data-cloud9-id="207" class="wall" height="10" width="15" depth="1.5" position="41.5 5 -48" color="grey" geometry="width:38" material=""></a-box>
+        <a-box data-cloud9-id="208" class="wall" height="10" width="15" depth="1.5" position="41.5 5 -45.25" color="grey" geometry="width:38" material=""></a-box>
+        <a-box data-cloud9-id="209" class="wall" height="10" width="15" depth="1.5" position="-0.5 5 -30" color="grey" geometry="width:7.5" material=""></a-box>
+        <a-box data-cloud9-id="210" class="wall" height="10" width="15" depth="1.5" position="2.5 5 -33" color="grey" geometry="width:7.5" material=""></a-box>
+        <a-box data-cloud9-id="211" class="wall" height="10" width="15" depth="1.5" position="17.25 5 -21.5" color="grey" geometry="width:25" material=""></a-box>
+        <a-box data-cloud9-id="212" class="wall" height="10" width="15" depth="1.5" position="0.25 5 -18.5" color="grey" geometry="width:6" material=""></a-box>
+        <a-box data-cloud9-id="213" class="wall" height="10" width="15" depth="1.5" position="0.25 5 -21.5" color="grey" geometry="width:6" material=""></a-box>
+        <a-box data-cloud9-id="214" class="wall" height="10" width="15" depth="1.5" position="-12.5 5 -20" color="grey" geometry="width:6.5" material=""></a-box>
+        <a-box data-cloud9-id="215" class="wall" height="10" width="15" depth="1.5" position="-31.5 5 -22.75" color="grey" geometry="width:9" material=""></a-box>
+
+        <!--spheres move-->
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="0 2.2 -5.6" material="" geometry=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="21.151 2.2 -5.6" material="" geometry=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="21.151 2.2 -19.915" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="12.645 2.2 -19.915" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="12.645 2.2 -13.377" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="3.884 2.2 -13.377" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="3.884 2.2 -20.043" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-1.786 2.2 -20.043" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="4.029 2.2 -31.404" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-2.883 2.2 -31.404" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-2.883 2.2 -38.213" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-26.281 2.2 -38.213" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-32.444 2.2 -38.213" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-32.444 2.2 -49.499" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-21.647 2.2 -49.499" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-21.647 2.2 -58.728" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-10.167 2.2 -58.728" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-10.167 2.2 -51.405" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="8.22 2.2 -51.405" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="15.17 2.2 -48.47" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="22.976 2.2 -46.571" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="45.501 2.2 -46.571" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="61.88 2.2 -46.571" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="61.88 2.2 -57.395" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="61.88 2.2 -37.168" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="61.88 2.2 -25.743" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="52.335 2.2 -25.743" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="52.335 2.2 -33.798" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="42.909 2.2 -33.798" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="42.909 2.2 -39.987" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="42.909 2.2 -27.093" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="30.436 2.2 -27.093" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="30.436 2.2 -19.655" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="30.436 2.2 -11.818" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="37.477 2.2 -11.818" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="43.08 2.2 -11.818" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="43.08 2.2 -17.031" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="38.183 2.2 -17.031" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="37.477 2.2 -5.4" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="16.771 2.2 -27.093" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="47.9 2.2 -39.987" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-26.281 2.2 -21.462" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-34.449 2.2 -21.462" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-16.486 2.2 -21.462" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-16.486 2.2 -5.797" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-8.547 2.2 -21.435" material=""></a-sphere>
+        <a-sphere data-cloud9-id="114" class="apparate " radius=".1 " position="-8.547 2.2 -13.663" material=""></a-sphere>
+        <!--<a-sphere class="apparate " radius=".1 " position="-13.5 2.2 -5.6 "></a-sphere>-->
+        <!--<a-sphere class="apparate " radius=".1 " position="18 2.2 -5.6 "></a-sphere>-->
+        <!--<a-sphere class="apparate " radius=".1 " position="0 2.2 -13.5 "></a-sphere>-->
+        <!--<a-sphere class="apparate " radius=".1 " position="-4.2 2.2 -14.128 "></a-sphere>-->
+        <!--<a-sphere class="apparate " radius=".1 " position="-8.8 2.2 -13.5 "></a-sphere>-->
+        <!--<a-sphere class="apparate " radius=".1 " position="6.5 2.2 -16 "></a-sphere>-->
+        <!--<a-sphere class="apparate " radius=".1 " position="-8.8 2.2 -13.5 " ></a-sphere>-->
+        <!--<a-sphere class="apparate " radius=".1 " position="-1.427 2.2 -16.5 " ></a-sphere>-->
+        <!--- runaway option--->
+        <a-sphere data-cloud9-id="115" id="runawaysphere " onclick="exitGame() " radius=".1 " color="purple " position="0 2.2 4" width="1 " material="color:purple" geometry=""></a-sphere>
+
+
+    </a-scene>
+
+
+
+    <script src="/_static/preview/livecss.js"></script><a style="display: none;"></a>
+    <c9__div class="c9___highlighter" style="position: fixed; z-index: 2147483647; border: 1px solid rgba(238, 238, 48, 0.5); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px; pointer-events: none; color: black; background: transparent; left: -1px; top: -1px; width: 2px; height: 2px;">
+        <c9__div style="white-space: nowrap; position: absolute; bottom: -20px; left: 0px; font-family: Arial; font-size: 11px; background: rgb(228, 214, 140); color: rgb(0, 0, 0); padding: 2px 4px 3px; border-radius: 3px; box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 3px;">
+            <c9__div style="border-width: 7px; border-style: inset; border-color: transparent transparent rgb(228, 214, 140); border-image: initial; position: absolute; left: 3px; top: -13px;"></c9__div>
+            <c9__label style="color: rgb(0, 0, 0);">
+                <c9__span style="color:maroon">a-box
+                    <c9__span style="color:rgb(72, 128, 12)">.wall</c9__span>
+                </c9__span> 0
+                <c9__span style="color:gray">px</c9__span> x 0
+                <c9__span style="color:gray">px</c9__span>
+            </c9__label>
+        </c9__div>
+    </c9__div>
+</body>
+
+</html>
