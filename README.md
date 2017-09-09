@@ -14,8 +14,6 @@ Throughout Kode With Klossy, we learned how to use all the tools listed below fo
 
 We were both drawn to the creative capabilties of A-Frame. When brainstorming ideas, we were extremely excited about being able to live our fantasies, from Harry Potter to Tinkerbell, etc. We eventually decided to persue the idea of remaking the Triwizard Cup third task maze experience.
 
-
-
 #### Goals:
 Create a circular maze similar to that of the movie
 Have music/sound effects playing that changed once you encountered an obstacle
